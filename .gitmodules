@@ -1,0 +1,9 @@
+[submodule "vendor/core-firmware"]
+	path = vendor/core-firmware
+	url = git@github.com:spark/core-firmware.git
+[submodule "vendor/core-common-lib"]
+	path = vendor/core-common-lib
+	url = git@github.com:spark/core-common-lib.git
+[submodule "vendor/core-communication-lib"]
+	path = vendor/core-communication-lib
+	url = git@github.com:spark/core-communication-lib.git
