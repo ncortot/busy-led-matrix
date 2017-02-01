@@ -2,6 +2,7 @@ import evdev
 from evdev.util import categorize
 import os
 
+base_path = os.path.dirname(os.path.realpath(__file__))
 
 device = evdev.InputDevice('/dev/input/event0')
 
@@ -20,5 +21,5 @@ for event in device.read_loop():
     if event.type == evdev.ecodes.EV_KEY:
         key = evdev.events.KeyEvent(event)
         if key.keycode in keymap and key.keystate == key.key_down:
-            command = "( echo -ne '\\xff'; convert %s -rotate 90 -depth 1 rgba:-; echo -ne '\\xff' ) > /dev/ttyAMA0" % keymap[key.keycode]
+            command = "( echo -ne '\\xff'; convert %s -rotate 90 -depth 1 rgba:-; echo -ne '\\xff' ) > /dev/ttyAMA0" % os.path.join(base_path, keymap[key.keycode])
             os.system(command)
