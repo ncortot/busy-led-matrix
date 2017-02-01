@@ -13,6 +13,7 @@ keymap = {
     'KEY_KP5': 'images/call.png',
     'KEY_KP7': 'images/beer.png',
     'KEY_KP8': 'images/vacation.png',
+    'KEY_KP9': 'images/error.png',
 }
 
 for event in device.read_loop():
