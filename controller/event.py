@@ -7,6 +7,7 @@ base_path = os.path.dirname(os.path.realpath(__file__))
 device = evdev.InputDevice('/dev/input/event0')
 
 keymap = {
+    'KEY_KP0': 'images/creepy.png',    
     'KEY_KP1': 'images/open.png',
     'KEY_KP2': 'images/closed.png',
     'KEY_KP3': 'images/pacman.png',
